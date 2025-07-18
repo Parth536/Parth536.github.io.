@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunderlal Suresh Chand (SLSC) - Color Solutions Provider</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts for Logo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Styles & Animations -->
+    <style>
+        /* Define custom animations */
+        @keyframes fade-in-down {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fade-in-up {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-down { animation: fade-in-down 0.6s ease-out forwards; }
+        .animate-fade-in-up { animation: fade-in-up 0.6s ease-out forwards; }
+        
+        /* Define font for logo */
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+
+        /* Hide all pages by default */
+        .page-section { display: none; }
+    </style>
+</head>
+<body class="bg-white font-sans text-gray-800">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" onclick="navigateTo('home')" class="block" aria-label="SLSC Home">
+                        <!-- SVG Logo -->
+                        <div id="logo-container">
+                            <svg width="120" height="40" viewBox="0 0 120 40">
+                                <defs>
+                                    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#14b8a6" />
+                                        <stop offset="100%" style="stop-color:#2563eb" />
+                                    </linearGradient>
+                                </defs>
+                                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-montserrat font-bold text-4xl" fill="url(#logoGradient)">
+                                    SLSC
+                                </text>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8" id="desktop-nav">
+                    <a href="#" onclick="navigateTo('home')" class="nav-link font-medium transition-colors duration-300 text-white hover:text-teal-300">Home</a>
+                    <a href="#" onclick="navigateTo('about')" class="nav-link font-medium transition-colors duration-300 text-white hover:text-teal-300">About Us</a>
+                    <a href="#" onclick="navigateTo('products')" class="nav-link font-medium transition-colors duration-300 text-white hover:text-teal-300">Products</a>
+                    <a href="#" onclick="navigateTo('contact')" class="nav-link font-medium transition-colors duration-300 text-white hover:text-teal-300">Contact Us</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="focus:outline-none text-white">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white absolute top-full left-0 w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" onclick="navigateTo('home')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-500 hover:bg-gray-50">Home</a>
+                <a href="#" onclick="navigateTo('about')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-500 hover:bg-gray-50">About Us</a>
+                <a href="#" onclick="navigateTo('products')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-500 hover:bg-gray-50">Products</a>
+                <a href="#" onclick="navigateTo('contact')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-500 hover:bg-gray-50">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Page -->
+        <section id="page-home" class="page-section">
+            <div class="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-white overflow-hidden">
+                <div class="absolute inset-0 z-10" style="background: conic-gradient(from 180deg at 50% 70%, #0d9488, #2563eb, #dc2626, #f97316, #facc15, #4d7c0f, #0d9488);"></div>
+                <div class="absolute inset-0 bg-black/50 z-20"></div>
+                <div class="relative z-30 text-center p-4">
+                    <h2 class="text-xl md:text-2xl font-semibold tracking-wider uppercase animate-fade-in-down">Pigments Overview</h2>
+                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight my-4 animate-fade-in-down" style="animation-delay: 200ms;">COLOR SOLUTIONS PROVIDER</h1>
+                    <p class="text-lg md:text-xl max-w-3xl mx-auto animate-fade-in-up" style="animation-delay: 400ms;">Delivering a spectrum of high-quality dyes and chemicals for every industrial need.</p>
+                </div>
+            </div>
+            
+            <div class="bg-gray-100 py-12 md:py-16">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg -mt-32 relative z-40">
+                        <div class="grid md:grid-cols-5 gap-6 items-center">
+                            <div class="md:col-span-1 font-bold text-xl text-gray-800">Product Finder</div>
+                            <div class="md:col-span-4">
+                                <div class="flex flex-wrap items-center gap-4">
+                                    <button onclick="navigateTo('products')" class="px-5 py-2 text-gray-700 bg-gray-200 hover:bg-teal-500 hover:text-white rounded-full font-medium transition-all duration-300">Dyes</button>
+                                    <button onclick="navigateTo('products')" class="px-5 py-2 text-gray-700 bg-gray-200 hover:bg-teal-500 hover:text-white rounded-full font-medium transition-all duration-300">Chemicals</button>
+                                    <button onclick="navigateTo('products')" class="px-5 py-2 text-gray-700 bg-gray-200 hover:bg-teal-500 hover:text-white rounded-full font-medium transition-all duration-300">Emulsions</button>
+                                    <button onclick="navigateTo('products')" class="px-5 py-2 text-gray-700 bg-gray-200 hover:bg-teal-500 hover:text-white rounded-full font-medium transition-all duration-300">Auxiliaries</button>
+                                    <button onclick="navigateTo('products')" class="flex items-center gap-2 text-teal-600 hover:text-teal-800 font-bold transition-colors">
+                                        <span>View All</span><i data-lucide="chevrons-right" class="w-5 h-5"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-20 bg-white">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Pioneering Chemical Solutions Since 1950</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">With decades of experience, SLSC is a leading name in the chemical and dyes trading industry, committed to delivering quality, reliability, and innovation to our clients worldwide.</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <button onclick="navigateTo('about')" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-8 rounded-lg transition-transform transform hover:scale-105 shadow-lg">Learn More About Us</button>
+                        <button onclick="navigateTo('contact')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-transform transform hover:scale-105 shadow-lg">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-12 bg-gray-50">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <h3 class="text-center text-xl font-semibold text-gray-500 mb-8">Trusted by Industry Leaders & Certified for Quality</h3>
+                    <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+                        <div class="flex items-center justify-center h-12 text-gray-500 font-semibold text-lg grayscale hover:grayscale-0 transition-all duration-300">ISO 9001</div>
+                        <div class="flex items-center justify-center h-12 text-gray-500 font-semibold text-lg grayscale hover:grayscale-0 transition-all duration-300">EcoVadis</div>
+                        <div class="flex items-center justify-center h-12 text-gray-500 font-semibold text-lg grayscale hover:grayscale-0 transition-all duration-300">REACH</div>
+                        <div class="flex items-center justify-center h-12 text-gray-500 font-semibold text-lg grayscale hover:grayscale-0 transition-all duration-300">GOTS</div>
+                        <div class="flex items-center justify-center h-12 text-gray-500 font-semibold text-lg grayscale hover:grayscale-0 transition-all duration-300">Bluesign</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Page -->
+        <section id="page-about" class="page-section pt-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="mb-20">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Legacy of Excellence</h2>
+                            <p class="text-gray-600 mb-4">Founded in 1950 by the visionary Mr. Sunderlal Gupta, our company began as a small trading house with a grand vision. Over the decades, under the leadership of Mr. Suresh Chand Gupta, we have grown into a formidable force in the chemical industry.</p>
+                            <p class="text-gray-600">Our journey is marked by a relentless pursuit of quality, a commitment to our clients, and an unwavering ethical compass. We have adapted to changing markets, embraced innovation, and built lasting relationships that are the bedrock of our success.</p>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <img src="http://googleusercontent.com/file_content/1" alt="Suresh Chand Bansal" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 max-w-sm w-full h-auto object-cover" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-20 text-center">
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="p-8 bg-gray-50 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <h3 class="text-2xl font-bold text-blue-600 mb-3">Our Mission</h3>
+                            <p class="text-gray-600">To be the most reliable and innovative supplier of chemicals and dyes, empowering our clients' success through superior products and exceptional service.</p>
+                        </div>
+                        <div class="p-8 bg-gray-50 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <h3 class="text-2xl font-bold text-teal-600 mb-3">Our Vision</h3>
+                            <p class="text-gray-600">To be a global leader in chemical trading, recognized for our commitment to sustainability, quality, and customer-centricity.</p>
+                        </div>
+                        <div class="p-8 bg-gray-50 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <h3 class="text-2xl font-bold text-amber-600 mb-3">Core Values</h3>
+                            <p class="text-gray-600">Integrity, Quality, Customer Focus, Innovation, and Sustainability are the pillars that guide every decision we make.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <section>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Meet Our Leadership</h2>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+                        <div class="text-center group">
+                            <div class="relative inline-block">
+                                <img src="https://placehold.co/400x400/E2E8F0/4A5568?text=VB" alt="Vibhu Bansal" class="w-48 h-48 rounded-full mx-auto mb-4 shadow-lg object-cover transition-transform duration-300 group-hover:scale-105" />
+                                <div class="absolute inset-0 rounded-full bg-teal-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800">Vibhu Bansal</h4>
+                            <p class="text-teal-600 font-medium">Founder & Chairman</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="relative inline-block">
+                                <img src="https://placehold.co/400x400/E2E8F0/4A5568?text=SB" alt="Shilpi Bansal" class="w-48 h-48 rounded-full mx-auto mb-4 shadow-lg object-cover transition-transform duration-300 group-hover:scale-105" />
+                                <div class="absolute inset-0 rounded-full bg-teal-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800">Shilpi Bansal</h4>
+                            <p class="text-teal-600 font-medium">Managing Director</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="relative inline-block">
+                                <img src="https://placehold.co/400x400/E2E8F0/4A5568?text=PB" alt="Parth Bansal" class="w-48 h-48 rounded-full mx-auto mb-4 shadow-lg object-cover transition-transform duration-300 group-hover:scale-105" />
+                                <div class="absolute inset-0 rounded-full bg-teal-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800">Parth Bansal</h4>
+                            <p class="text-teal-600 font-medium">Director, Sales & Marketing</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Products Page -->
+        <section id="page-products" class="page-section pt-20 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <h1 class="text-4xl font-bold text-center mb-4">Our Products</h1>
+                <p class="text-lg text-gray-600 text-center max-w-2xl mx-auto mb-12">Explore our comprehensive range of high-quality chemicals and dyes, tailored to meet the diverse needs of your industry.</p>
+
+                <div class="flex flex-col md:flex-row gap-4 justify-between items-center mb-12">
+                    <div id="product-filters" class="flex flex-wrap gap-2">
+                        <button data-filter="All" class="product-filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors bg-teal-500 text-white shadow">All</button>
+                        <button data-filter="Dyes" class="product-filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors bg-white text-gray-700 hover:bg-gray-200">Dyes</button>
+                        <button data-filter="Chemicals" class="product-filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors bg-white text-gray-700 hover:bg-gray-200">Chemicals</button>
+                        <button data-filter="Emulsions" class="product-filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors bg-white text-gray-700 hover:bg-gray-200">Emulsions</button>
+                        <button data-filter="Auxiliaries" class="product-filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors bg-white text-gray-700 hover:bg-gray-200">Auxiliaries</button>
+                    </div>
+                    <div class="relative w-full md:w-auto">
+                        <input id="product-search" type="text" placeholder="Search products..." class="w-full md:w-64 pl-4 pr-10 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-500" />
+                    </div>
+                </div>
+
+                <div id="product-gallery" class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <!-- Product items will be dynamically inserted here by JS if needed, or hardcoded -->
+                    <div class="product-card bg-white rounded-lg shadow-md overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300" data-category="Dyes" data-name="Reactive Dyes">
+                        <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Reactive+Dyes" alt="Reactive Dyes" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Reactive Dyes</h3>
+                            <p class="text-gray-600 text-sm mb-4">High-performance dyes for cellulosic fibers.</p>
+                            <div class="text-xs text-gray-500 mb-4">
+                                <p><strong>Packaging:</strong> 25kg Bags</p>
+                                <p><strong>Grade:</strong> Industrial Grade</p>
+                            </div>
+                            <div class="space-y-2">
+                                <button class="w-full flex items-center justify-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg text-sm transition-colors"><i data-lucide="download" class="w-4 h-4"></i><span>Datasheet</span></button>
+                                <button class="w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg text-sm transition-colors">Request Quote / Sample</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card bg-white rounded-lg shadow-md overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300" data-category="Dyes" data-name="Disperse Dyes">
+                        <img src="https://placehold.co/600x400/10B981/FFFFFF?text=Disperse+Dyes" alt="Disperse Dyes" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Disperse Dyes</h3>
+                            <p class="text-gray-600 text-sm mb-4">For polyester and synthetic fibers.</p>
+                            <div class="text-xs text-gray-500 mb-4">
+                                <p><strong>Packaging:</strong> 25kg Drums</p>
+                                <p><strong>Grade:</strong> Textile Grade</p>
+                            </div>
+                            <div class="space-y-2">
+                                <button class="w-full flex items-center justify-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg text-sm transition-colors"><i data-lucide="download" class="w-4 h-4"></i><span>Datasheet</span></button>
+                                <button class="w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg text-sm transition-colors">Request Quote / Sample</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card bg-white rounded-lg shadow-md overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300" data-category="Chemicals" data-name="Caustic Soda">
+                        <img src="https://placehold.co/600x400/6366F1/FFFFFF?text=Caustic+Soda" alt="Caustic Soda" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Caustic Soda</h3>
+                            <p class="text-gray-600 text-sm mb-4">Essential for various industrial processes.</p>
+                            <div class="text-xs text-gray-500 mb-4">
+                                <p><strong>Packaging:</strong> 50kg Bags</p>
+                                <p><strong>Grade:</strong> 99% Purity</p>
+                            </div>
+                            <div class="space-y-2">
+                                <button class="w-full flex items-center justify-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg text-sm transition-colors"><i data-lucide="download" class="w-4 h-4"></i><span>Datasheet</span></button>
+                                <button class="w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg text-sm transition-colors">Request Quote / Sample</button>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-card bg-white rounded-lg shadow-md overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300" data-category="Chemicals" data-name="Soda Ash">
+                        <img src="https://placehold.co/600x400/8B5CF6/FFFFFF?text=Soda+Ash" alt="Soda Ash" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Soda Ash</h3>
+                            <p class="text-gray-600 text-sm mb-4">Used in glass, detergent, and chemical manufacturing.</p>
+                            <div class="text-xs text-gray-500 mb-4">
+                                <p><strong>Packaging:</strong> 50kg Bags</p>
+                                <p><strong>Grade:</strong> Light & Dense</p>
+                            </div>
+                            <div class="space-y-2">
+                                <button class="w-full flex items-center justify-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg text-sm transition-colors"><i data-lucide="download" class="w-4 h-4"></i><span>Datasheet</span></button>
+                                <button class="w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg text-sm transition-colors">Request Quote / Sample</button>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-card bg-white rounded-lg shadow-md overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300" data-category="Emulsions" data-name="Silicone Emulsions">
+                        <img src="https://placehold.co/600x400/EC4899/FFFFFF?text=Silicone+Emulsions" alt="Silicone Emulsions" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Silicone Emulsions</h3>
+                            <p class="text-gray-600 text-sm mb-4">For finishing, lubrication, and release agents.</p>
+                            <div class="text-xs text-gray-500 mb-4">
+                                <p><strong>Packaging:</strong> 200kg Drums</p>
+                                <p><strong>Grade:</strong> Various Concentrations</p>
+                            </div>
+                            <div class="space-y-2">
+                                <button class="w-full flex items-center justify-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg text-sm transition-colors"><i data-lucide="download" class="w-4 h-4"></i><span>Datasheet</span></button>
+                                <button class="w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg text-sm transition-colors">Request Quote / Sample</button>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-card bg-white rounded-lg shadow-md overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300" data-category="Emulsions" data-name="Wax Emulsions">
+                        <img src="https://placehold.co/600x400/F59E0B/FFFFFF?text=Wax+Emulsions" alt="Wax Emulsions" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Wax Emulsions</h3>
+                            <p class="text-gray-600 text-sm mb-4">Provides water repellency and surface gloss.</p>
+                            <div class="text-xs text-gray-500 mb-4">
+                                <p><strong>Packaging:</strong> 200kg Drums</p>
+                                <p><strong>Grade:</strong> Cationic/Non-ionic</p>
+                            </div>
+                            <div class="space-y-2">
+                                <button class="w-full flex items-center justify-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg text-sm transition-colors"><i data-lucide="download" class="w-4 h-4"></i><span>Datasheet</span></button>
+                                <button class="w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg text-sm transition-colors">Request Quote / Sample</button>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-card bg-white rounded-lg shadow-md overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300" data-category="Auxiliaries" data-name="Wetting Agents">
+                        <img src="https://placehold.co/600x400/EF4444/FFFFFF?text=Wetting+Agents" alt="Wetting Agents" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Wetting Agents</h3>
+                            <p class="text-gray-600 text-sm mb-4">Improves liquid spreading and penetration.</p>
+                            <div class="text-xs text-gray-500 mb-4">
+                                <p><strong>Packaging:</strong> 50kg Carboys</p>
+                                <p><strong>Grade:</strong> Textile Processing</p>
+                            </div>
+                            <div class="space-y-2">
+                                <button class="w-full flex items-center justify-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg text-sm transition-colors"><i data-lucide="download" class="w-4 h-4"></i><span>Datasheet</span></button>
+                                <button class="w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg text-sm transition-colors">Request Quote / Sample</button>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-card bg-white rounded-lg shadow-md overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300" data-category="Auxiliaries" data-name="Sequestering Agents">
+                        <img src="https://placehold.co/600x400/06B6D4/FFFFFF?text=Sequestering+Agents" alt="Sequestering Agents" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Sequestering Agents</h3>
+                            <p class="text-gray-600 text-sm mb-4">Controls metal ions in water.</p>
+                            <div class="text-xs text-gray-500 mb-4">
+                                <p><strong>Packaging:</strong> 50kg Carboys</p>
+                                <p><strong>Grade:</strong> Water Treatment</p>
+                            </div>
+                            <div class="space-y-2">
+                                <button class="w-full flex items-center justify-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg text-sm transition-colors"><i data-lucide="download" class="w-4 h-4"></i><span>Datasheet</span></button>
+                                <button class="w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg text-sm transition-colors">Request Quote / Sample</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="page-contact" class="page-section pt-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <h1 class="text-4xl font-bold text-center mb-4">Get In Touch</h1>
+                <p class="text-lg text-gray-600 text-center max-w-2xl mx-auto mb-12">We're here to help. Contact us for quotes, samples, or any questions you may have.</p>
+
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold mb-6">Send us a Message</h2>
+                        <form>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                                <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" />
+                                <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" />
+                            </div>
+                            <div class="mb-6">
+                                <input type="tel" placeholder="Your Phone" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" />
+                            </div>
+                            <div class="mb-6">
+                                <textarea placeholder="Your Message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full flex items-center justify-center gap-2 bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition-colors shadow hover:shadow-lg">
+                                <i data-lucide="send" class="w-5 h-5"></i><span>Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div>
+                        <div class="mb-8">
+                            <h2 class="text-2xl font-bold mb-4">Contact Information</h2>
+                            <div class="space-y-4 text-gray-600">
+                                <div class="flex items-start gap-4">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-teal-600 mt-1 flex-shrink-0"></i>
+                                    <span>W29, Textile city center pilkhuwa,Hapur , Uttarpradesh</span>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <i data-lucide="mail" class="w-5 h-5 text-teal-600"></i>
+                                    <a href="mailto:sunderlalsureshchand@gmail.com" class="hover:text-blue-600">sunderlalsureshchand@gmail.com</a>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <i data-lucide="phone" class="w-5 h-5 text-teal-600"></i>
+                                    <a href="tel:+911123456789" class="hover:text-blue-600">+91 11 2345 6789</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h-80 rounded-lg overflow-hidden shadow-md">
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.8392319344!2d77.0688975475454!3d28.52728034241984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1678886450134!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-16 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg transition-transform transform hover:scale-105 shadow-lg flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-6 h-6"></i><span>Chat on WhatsApp</span>
+                    </a>
+                    <a href="tel:+919876543210" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-8 rounded-lg transition-transform transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 sm:hidden">
+                        <i data-lucide="phone" class="w-5 h-5"></i><span>Call Now</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-1">
+                    <!-- Footer Logo -->
+                    <svg width="120" height="40" viewBox="0 0 120 40">
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="font-montserrat font-bold text-4xl" fill="white">SLSC</text>
+                    </svg>
+                    <p class="text-gray-400 mt-4 text-sm">Leading suppliers of industrial chemicals and dyes since 1950.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" onclick="navigateTo('about')" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" onclick="navigateTo('products')" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="#" onclick="navigateTo('contact')" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-400">W29, Textile city center pilkhuwa,Hapur , Uttarpradesh</p>
+                    <p class="text-gray-400">sunderlalsureshchand@gmail.com</p>
+                    <p class="text-gray-400">+91 11 2345 6789</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Sunderlal Suresh Chand. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.getElementById('header');
+            const logoText = header.querySelector('#logo-container text');
+            const navLinks = header.querySelectorAll('#desktop-nav .nav-link');
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuBtnIcon = menuBtn.querySelector('i');
+
+            let currentPageId = 'home';
+
+            // --- Page Navigation ---
+            window.navigateTo = function(pageId) {
+                // Hide all pages
+                document.querySelectorAll('.page-section').forEach(page => {
+                    page.style.display = 'none';
+                });
+                
+                // Show the selected page
+                const targetPage = document.getElementById(`page-${pageId}`);
+                if (targetPage) {
+                    targetPage.style.display = 'block';
+                    currentPageId = pageId;
+                }
+                
+                window.scrollTo(0, 0);
+                updateHeaderStyle();
+                
+                // Close mobile menu on navigation
+                mobileMenu.classList.add('hidden');
+                menuBtnIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            }
+
+            // --- Header Styling on Scroll ---
+            function updateHeaderStyle() {
+                const isScrolled = window.scrollY > 10;
+                const isTransparent = currentPageId === 'home' && !isScrolled;
+
+                if (isTransparent) {
+                    header.classList.remove('bg-white/90', 'shadow-md', 'backdrop-blur-sm');
+                    header.classList.add('bg-transparent');
+                    logoText.setAttribute('fill', 'white');
+                    navLinks.forEach(link => {
+                        link.classList.remove('text-gray-700', 'hover:text-teal-500');
+                        link.classList.add('text-white', 'hover:text-teal-300');
+                    });
+                    menuBtn.classList.remove('text-gray-800');
+                    menuBtn.classList.add('text-white');
+                } else {
+                    header.classList.add('bg-white/90', 'shadow-md', 'backdrop-blur-sm');
+                    header.classList.remove('bg-transparent');
+                    logoText.setAttribute('fill', 'url(#logoGradient)');
+                    navLinks.forEach(link => {
+                        link.classList.add('text-gray-700', 'hover:text-teal-500');
+                        link.classList.remove('text-white', 'hover:text-teal-300');
+                    });
+                    menuBtn.classList.add('text-gray-800');
+                    menuBtn.classList.remove('text-white');
+                }
+            }
+            
+            window.addEventListener('scroll', updateHeaderStyle);
+
+            // --- Mobile Menu Toggle ---
+            menuBtn.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.toggle('hidden');
+                menuBtnIcon.setAttribute('data-lucide', isHidden ? 'menu' : 'x');
+                lucide.createIcons();
+            });
+
+            // --- Product Filtering Logic ---
+            const filterButtons = document.querySelectorAll('.product-filter-btn');
+            const searchInput = document.getElementById('product-search');
+            const productCards = document.querySelectorAll('.product-card');
+            let currentFilter = 'All';
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active button style
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-teal-500', 'text-white', 'shadow');
+                        btn.classList.add('bg-white', 'text-gray-700');
+                    });
+                    button.classList.add('bg-teal-500', 'text-white', 'shadow');
+                    button.classList.remove('bg-white', 'text-gray-700');
+                    
+                    currentFilter = button.dataset.filter;
+                    filterProducts();
+                });
+            });
+
+            searchInput.addEventListener('input', filterProducts);
+
+            function filterProducts() {
+                const searchTerm = searchInput.value.toLowerCase();
+                productCards.forEach(card => {
+                    const category = card.dataset.category;
+                    const name = card.dataset.name.toLowerCase();
+
+                    const categoryMatch = currentFilter === 'All' || currentFilter === category;
+                    const searchMatch = name.includes(searchTerm);
+
+                    if (categoryMatch && searchMatch) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            // --- Initial Setup ---
+            lucide.createIcons(); // Initial render for all icons
+            navigateTo('home'); // Show home page on initial load
+        });
+    </script>
+
+</body>
+</html>
